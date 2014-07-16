@@ -24,15 +24,3 @@ DerivedData
 # http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control?
 #
 Pods/
-
-# Sublime Text
-#
-# workspace files are user-specific
-*.sublime-workspace
-
-# project files should be checked into the repository, unless a significant
-# proportion of contributors will probably not be using SublimeText
-*.sublime-project
-
-#sftp configuration file
-sftp-config.json
