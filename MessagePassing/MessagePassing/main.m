@@ -8,14 +8,29 @@
 
 #import <Foundation/Foundation.h>
 
+@interface Sub : NSObject
+
+- (void)print;
+
+@end
+
+@implementation Sub
+
+- (void)print {
+    NSLog(@"Sub");
+}
+
+@end
+
 int main(int argc, const char * argv[])
 {
 
     @autoreleasepool {
+        Sub *sub = [[Sub alloc] init];
+        [sub print];
         
-        // insert code here...
-        NSLog(@"Hello, World!");
-        
+        NSObject *test = [[NSObject alloc] init];
+        [(Sub *)test print]; // TODO - 仍然未理解
     }
     return 0;
 }

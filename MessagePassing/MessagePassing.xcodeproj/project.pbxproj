@@ -10,6 +10,8 @@
 		205FD1DC1976BD310099B445 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205FD1DB1976BD310099B445 /* Foundation.framework */; };
 		205FD1DF1976BD310099B445 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 205FD1DE1976BD310099B445 /* main.m */; };
 		205FD1E31976BD310099B445 /* MessagePassing.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 205FD1E21976BD310099B445 /* MessagePassing.1 */; };
+		205FD1EB1976BEA60099B445 /* A.m in Sources */ = {isa = PBXBuildFile; fileRef = 205FD1EA1976BEA60099B445 /* A.m */; };
+		205FD1EE1976BEB90099B445 /* B.m in Sources */ = {isa = PBXBuildFile; fileRef = 205FD1ED1976BEB90099B445 /* B.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +33,10 @@
 		205FD1DE1976BD310099B445 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		205FD1E11976BD310099B445 /* MessagePassing-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MessagePassing-Prefix.pch"; sourceTree = "<group>"; };
 		205FD1E21976BD310099B445 /* MessagePassing.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = MessagePassing.1; sourceTree = "<group>"; };
+		205FD1E91976BEA60099B445 /* A.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = A.h; sourceTree = "<group>"; };
+		205FD1EA1976BEA60099B445 /* A.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = A.m; sourceTree = "<group>"; };
+		205FD1EC1976BEB90099B445 /* B.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B.h; sourceTree = "<group>"; };
+		205FD1ED1976BEB90099B445 /* B.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = B.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,10 @@
 		205FD1DD1976BD310099B445 /* MessagePassing */ = {
 			isa = PBXGroup;
 			children = (
+				205FD1E91976BEA60099B445 /* A.h */,
+				205FD1EA1976BEA60099B445 /* A.m */,
+				205FD1EC1976BEB90099B445 /* B.h */,
+				205FD1ED1976BEB90099B445 /* B.m */,
 				205FD1DE1976BD310099B445 /* main.m */,
 				205FD1E21976BD310099B445 /* MessagePassing.1 */,
 				205FD1E01976BD310099B445 /* Supporting Files */,
@@ -139,7 +149,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				205FD1EE1976BEB90099B445 /* B.m in Sources */,
 				205FD1DF1976BD310099B445 /* main.m in Sources */,
+				205FD1EB1976BEA60099B445 /* A.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
