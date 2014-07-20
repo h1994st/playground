@@ -8,5 +8,8 @@ list = []
 for i in range(100):
 	list.append(random.randint(0, 10000))
 
+print list[1:]
+print [lt for lt in list[1:] if lt < list[0]]
+
 print list
 print qsort(list)

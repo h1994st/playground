@@ -1,4 +1,6 @@
 Python
 ======
 
-Learning Python
+Learn Python
+
+Learn functional programming
