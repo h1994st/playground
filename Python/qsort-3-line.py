@@ -20,7 +20,7 @@ def qsort2(L):
 def qsort3(L):  
     if not L:
         return L  
-    pivot = random.choice(L)  
+    pivot = random.choice(L)
 
     def lt(x):
         return x<pivot
