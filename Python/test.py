@@ -13,6 +13,14 @@ def primes(upper):
         if isPrime(i):
             print i
 
-primes(100)
+def main():
+    primes(100)
 
 # print isPrime(4)
+
+if __name__ == '__main__':
+    # main()
+    a = [1, 2, 3]
+    print a
+    del a[0]
+    print a
