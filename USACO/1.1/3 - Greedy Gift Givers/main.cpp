@@ -43,6 +43,7 @@ int main() {
 
 		if (numberOfReceiver == 0) continue;
 		int per = money / numberOfReceiver;
+		ans[giverIndex] += (money % numberOfReceiver);
 		for (int j = 0; j < numberOfReceiver; j++) {
 			char receiverName[NAME_LENGTH_MAX];
 			scanf("%s", receiverName);
