@@ -6,8 +6,11 @@ int n, i, k;
 /**
  * N Queens problem:
  *
- * Construction methods:
+ * Construction solution:
  * @url http://penguin.ewu.edu/~trolfe/QueenLasVegas/Hoffman.pdf
+ *
+ * DP solution (?):
+ * @url http://www.cs.cornell.edu/~rdz/Papers/RZ-IPL92.pdf
  */
 int main() {
     while (scanf("%d", &n) != EOF) {
