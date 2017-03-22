@@ -4,6 +4,11 @@
 
 #define MAX_LENGTH (32 + 8 + 1)
 
+/**
+ * Karatsuba算法
+ * @url https://zh.wikipedia.org/wiki/Karatsuba%E7%AE%97%E6%B3%95
+ */
+
 int cmp(const void *p1, const void *p2) {
     return strcmp(*((char **) p1), *((char **) p2));
 }
