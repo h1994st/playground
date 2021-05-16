@@ -1,6 +1,6 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/sublimetext,macos,linux,vim
-# Edit at https://www.toptal.com/developers/gitignore?templates=sublimetext,macos,linux,vim
+# Created by https://www.toptal.com/developers/gitignore/api/vim,linux,macos,sublimetext,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=vim,linux,macos,sublimetext,visualstudiocode
 
 ### Linux ###
 *~
@@ -98,4 +98,17 @@ tags
 # Persistent undo
 [._]*.un~
 
-# End of https://www.toptal.com/developers/gitignore/api/sublimetext,macos,linux,vim
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+
+# End of https://www.toptal.com/developers/gitignore/api/vim,linux,macos,sublimetext,visualstudiocode

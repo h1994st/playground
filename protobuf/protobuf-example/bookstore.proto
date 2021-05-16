@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package bookstore;
+
+import "date.proto";
+
+message Book {
+    string name = 1;
+    string publisher = 2;
+    string author = 3;
+
+    Date date = 4;
+}
+
+message Bookstore {
+    repeated Book book = 1;
+}
