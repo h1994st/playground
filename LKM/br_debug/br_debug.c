@@ -133,3 +133,4 @@ module_exit(br_debug_exit);
 
 MODULE_AUTHOR("Shengtuo Hu");
 MODULE_LICENSE("GPL");
+MODULE_VERSION("0.01");
