@@ -1,10 +1,6 @@
-ifndef NET_DEV_NAME
-	override NET_DEV_NAME = \"eno1\"
-endif
-
 obj-m := net_monitor.o
 
-MY_CFLAGS += -g -DDEBUG -DNET_DEV_NAME=${NET_DEV_NAME}
+MY_CFLAGS += -g -DDEBUG
 
 ccflags-y := $(MY_CFLAGS)
 
