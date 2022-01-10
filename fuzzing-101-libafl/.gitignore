@@ -1,0 +1,14 @@
+**/debug/
+**/target/
+
+**/*.rs.bk
+
+.idea/
+
+**/crashes/
+**/timeouts/
+**/.cur_input*
+
+LibAFL/
+AFLTriage/
+hirsute-rootfs/

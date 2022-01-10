@@ -1,0 +1,21 @@
+*.log
+*.log.*
+*.old
+*.obj
+*.zip
+*.o
+*.a
+*.dll
+*.so
+*/Makefile
+Makefile
+install/
+aconf.h
+config.status
+
+# bin
+pdffonts
+pdfimages
+pdfinfo
+pdftops
+pdftotext
