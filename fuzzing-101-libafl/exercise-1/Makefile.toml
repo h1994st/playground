@@ -1,0 +1,37 @@
+[tasks.clean]
+dependencies = ["cargo-clean", "afl-clean", "xpdf-clean"]
+
+[tasks.afl-clean]
+script = """
+rm -rf .cur_input* timeouts fuzzer fuzzer.o
+"""
+
+[tasks.xpdf-clean]
+cwd = "xpdf"
+script = """
+make --silent clean
+rm -rf built-with-* ../build/*
+"""
+
+[tasks.cargo-clean]
+args = ["clean"]
+command = "cargo"
+
+[tasks.rebuild]
+dependencies = ["afl-clean", "xpdf-clean", "compilers-build", "xpdf-build", "fuzzer-build"]
+
+[tasks.compilers-build]
+args = ["build", "--release"]
+command = "cargo"
+
+[tasks.xpdf-build]
+cwd = "build"
+script = """
+cmake ../xpdf -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=$(pwd)/../../target/release/compiler -DCMAKE_CXX_COMPILER=$(pwd)/../../target/release/compiler_pp
+make
+"""
+
+[tasks.fuzzer-build]
+script = """
+../target/release/compiler_pp -I xpdf/goo -I xpdf/fofi -I xpdf/splash -I xpdf/xpdf -I xpdf -o fuzzer harness.cc build/*/*.a -lm -ldl -lpthread -lstdc++ -lgcc -lutil -lrt
+"""

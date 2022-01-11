@@ -147,6 +147,9 @@ name = "cc"
 version = "1.0.72"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "22a9137b95ea06864e018375b72adfb7db6e6f68cfc8df5a04d00288050485ee"
+dependencies = [
+ "jobserver",
+]
 
 [[package]]
 name = "cfg-if"
@@ -264,6 +267,8 @@ name = "exercise-1-solution"
 version = "0.1.0"
 dependencies = [
  "libafl",
+ "libafl_cc",
+ "libafl_targets",
 ]
 
 [[package]]
@@ -310,6 +315,12 @@ name = "gimli"
 version = "0.26.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "78cc372d058dcf6d5ecd98510e7fbc9e5aec4d21de70f65fea8fecebcd881bd4"
+
+[[package]]
+name = "glob"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9b919933a397b79c37e33b77bb2aa3dc8eb6e165ad809e58ff75bc7db2e34574"
 
 [[package]]
 name = "hash32"
@@ -401,6 +412,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1aab8fc367588b89dcee83ab0fd66b72b50b72fa1904d7095045ace2b0c81c35"
 
 [[package]]
+name = "jobserver"
+version = "0.1.24"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "af25a77299a7f711a01975c35a6a424eb6862092cc2d6c72c4ed6cbc56dfc1fa"
+dependencies = [
+ "libc",
+]
+
+[[package]]
 name = "kernel32-sys"
 version = "0.2.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -457,6 +477,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "libafl_cc"
+version = "0.7.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c48de8ef16bbb4af6b387bc0b272e38909f49e12ec47a5329d156aad4d8ba0cb"
+dependencies = [
+ "cc",
+ "glob",
+]
+
+[[package]]
 name = "libafl_derive"
 version = "0.7.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -464,6 +494,18 @@ checksum = "8fd7b395e21fb86bf4e0a942489299e19904442fd12b1e854bdef958132edede"
 dependencies = [
  "quote",
  "syn",
+]
+
+[[package]]
+name = "libafl_targets"
+version = "0.7.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2ce70a15783ce7280fc8ed9dca62b655fb88b7e225f1824993072c3e2562660c"
+dependencies = [
+ "cc",
+ "libafl",
+ "rangemap",
+ "serde",
 ]
 
 [[package]]
@@ -703,6 +745,12 @@ name = "rand_core"
 version = "0.5.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "90bde5296fc891b0cef12a6d03ddccc162ce7b2aff54160af9338f8d40df6d19"
+
+[[package]]
+name = "rangemap"
+version = "0.1.14"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3929836cb64d09ee7deee59635c3d9bffbc1c0373e247efff6272abd62a11baa"
 
 [[package]]
 name = "regex"
