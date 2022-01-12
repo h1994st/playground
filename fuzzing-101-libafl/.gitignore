@@ -7,6 +7,7 @@
 
 **/crashes/
 **/timeouts/
+**/solutions/
 **/.cur_input*
 
 LibAFL/
@@ -25,3 +26,4 @@ hirsute-rootfs/
 *.so
 
 fuzzer
+triager

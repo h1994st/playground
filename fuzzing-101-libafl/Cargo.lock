@@ -272,6 +272,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "exercise-2-solution"
+version = "0.1.0"
+dependencies = [
+ "libafl",
+ "libafl_cc",
+ "libafl_targets",
+]
+
+[[package]]
 name = "generic-array"
 version = "0.12.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"

@@ -14,16 +14,27 @@ args = ["clean"]
 command = "cargo"
 
 [tasks.build]
-args = ["build"]
+dependencies = ["clean", "compilers-build", "libexif-build", "fuzzer-build"]
+
+[tasks.compilers-build]
+args = ["build", "--release"]
 command = "cargo"
-dependencies = ["clean", "libexif-build"]
 
 [tasks.libexif-build]
 cwd = "libexif"
+env = {"CC" = "${CARGO_MAKE_WORKING_DIRECTORY}/../target/release/ex2_compiler"}
 script = """
 mkdir ../build
 autoreconf -fi
-./configure --enable-shared=no --prefix="$(pwd)/../build/"
+./configure --enable-shared=no --prefix="${CARGO_MAKE_WORKING_DIRECTORY}/../build/"
 make -i
 make install
 """
+
+[tasks.fuzzer-build]
+args = ["-I", "./libexif/libexif", "-I", "./libexif", "-o", "fuzzer", "./harness.c", "./build/lib/libexif.a"]
+command = "../target/release/ex2_compiler"
+
+[tasks.triager-build]
+args = ["-D", "TRIAGE_TESTER", "-I", "./libexif/libexif", "-I", "./libexif", "-o", "triager", "./harness.c", "./build/lib/libexif.a"]
+command = "../target/release/ex2_compiler"
