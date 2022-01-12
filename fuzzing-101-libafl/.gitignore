@@ -12,3 +12,16 @@
 LibAFL/
 AFLTriage/
 hirsute-rootfs/
+
+*.log
+*.log.*
+*.old
+*.obj
+*.zip
+*.o
+*.o.tmp
+*.a
+*.dll
+*.so
+
+fuzzer

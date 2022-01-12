@@ -1,0 +1,29 @@
+[tasks.clean]
+dependencies = ["cargo-clean", "libexif-clean", "build-clean"]
+
+[tasks.libexif-clean]
+args = ["-C", "libexif", "clean", "-i"]
+command = "make"
+
+[tasks.build-clean]
+args = ["-rf", "build/"]
+command = "rm"
+
+[tasks.cargo-clean]
+args = ["clean"]
+command = "cargo"
+
+[tasks.build]
+args = ["build"]
+command = "cargo"
+dependencies = ["clean", "libexif-build"]
+
+[tasks.libexif-build]
+cwd = "libexif"
+script = """
+mkdir ../build
+autoreconf -fi
+./configure --enable-shared=no --prefix="$(pwd)/../build/"
+make -i
+make install
+"""
