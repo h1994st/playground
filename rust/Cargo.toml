@@ -1,4 +1,5 @@
 [workspace]
 members = [
   "c_in_rust",
+  "mixed_c_rust",
 ]

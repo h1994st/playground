@@ -545,6 +545,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "mixed_c_rust"
+version = "0.1.0"
+dependencies = [
+ "cc",
+ "libc",
+]
+
+[[package]]
 name = "nb"
 version = "0.1.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
