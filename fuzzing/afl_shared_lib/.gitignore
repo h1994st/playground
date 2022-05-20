@@ -1,0 +1,9 @@
+# CMake
+cmake-build-*/
+build/
+*-build/
+
+in/
+*-in/
+out/
+*-out/
