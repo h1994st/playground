@@ -3,8 +3,14 @@
 package main
 
 // Import external packages
-import "fmt"
+// We can import multiple packages using a single `import`
+import (
+	"fmt"
+	// `t` is the alias for the imported `time` package
+	t "time"
+)
 
 func main() {
 	fmt.Println("Hello World")
+	fmt.Println(t.Now())
 }

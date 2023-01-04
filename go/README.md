@@ -15,10 +15,18 @@ brew install go
 
 ## Examples
 
-### Compile and Run Files
+### Common Caommands
 
 ```bash
+# - Compile and Run Files
 go build <xxx.go>  # then, ./<xxx>
 # Or
 go run <xxx.go>
+
+# - Check documentations
+# About a package
+go doc fmt
+# About a package function
+go doc fmt.Println
+go doc time.Now
 ```

@@ -6,6 +6,6 @@
 # .gitignore file
 !.gitignore
 # directories
-!hello-world/
+!*/
 # all Go source files
 !*.go
