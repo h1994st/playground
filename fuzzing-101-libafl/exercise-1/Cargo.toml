@@ -6,9 +6,9 @@ version = "0.1.0"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-libafl = "0.7.0"
-libafl_cc = "0.7.0"
-libafl_targets = {version = "0.7.0", features = ["libfuzzer", "sancov_pcguard_hitcounts"]}
+libafl = "0.8.2"
+libafl_cc = "0.8.2"
+libafl_targets = {version = "0.8.2", features = ["libfuzzer", "sancov_pcguard_hitcounts"]}
 
 [lib]
 crate-type = ["staticlib"]

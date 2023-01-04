@@ -27,3 +27,5 @@ hirsute-rootfs/
 
 fuzzer
 triager
+
+Cargo.lock
