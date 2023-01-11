@@ -1,6 +1,6 @@
 # Go Tutorial
 
-Version: 1.19.4
+Version: 1.19.5
 
 References:
 
