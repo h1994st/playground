@@ -27,4 +27,20 @@ func main() {
 	// With `:=` operator, variables can be different types
 	quote, fact := "Bears, Beets, Battlestar Galactica", true
 	fmt.Println(quote, fact)
+
+	// Print
+	specialNum := 42
+	// `%T`: a Go-syntax representation of the type of the value
+	// See more on https://pkg.go.dev/fmt#hdr-Printing
+	fmt.Printf("Type: %T\n", specialNum)
+	gpa := 3.8
+	fmt.Printf("GPA: %.2f\n", gpa)
+	expr := fmt.Sprintf("%d + %.3f\n", specialNum, gpa)
+	fmt.Print(expr)
+
+	// User input
+	var response string
+	fmt.Println("How are you doing?")
+	fmt.Scan(&response)
+	fmt.Printf("I'm %v\n", response)
 }
