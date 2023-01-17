@@ -42,6 +42,12 @@ docker-compose scale taskmanager=<N>
 
 # Access the JobManager container
 docker exec -it $(docker ps --filter name=jobmanager --format={{.ID}}) /bin/bash
+# Access the TaskManager container
+docker exec -it $(docker ps --filter name=taskmanager --format={{.ID}}) /bin/bash
+# NOTE: the execution log will be stored on the task manager
+
+# Start the SQL client
+docker-compose run sql-client
 
 # Kill everything
 docker-compose down
