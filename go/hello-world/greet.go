@@ -6,6 +6,8 @@ package main
 // We can import multiple packages using a single `import`
 import (
 	"fmt"
+	"math/rand"
+
 	// `t` is the alias for the imported `time` package
 	t "time"
 )
@@ -43,4 +45,9 @@ func main() {
 	fmt.Println("How are you doing?")
 	fmt.Scan(&response)
 	fmt.Printf("I'm %v\n", response)
+
+	// Random
+	rand.Seed(t.Now().UnixNano())
+	amountLeft := rand.Intn(10000)
+	fmt.Println("amountLeft is:", amountLeft)
 }
