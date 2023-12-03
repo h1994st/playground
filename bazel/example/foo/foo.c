@@ -1,8 +1,7 @@
+#include "example/bar/bar_utils.h"
+#include "foo_utils.h"
 #include <stdio.h>
 #include <stdlib.h>
-
-#include "bar/bar_utils.h"
-#include "foo/foo_utils.h"
 
 int main(int argc, char **argv) {
   if (argc > 1) {

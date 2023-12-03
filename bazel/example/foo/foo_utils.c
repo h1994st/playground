@@ -1,5 +1,4 @@
-#include "foo/foo_utils.h"
-
+#include "foo_utils.h"
 #include <stdio.h>
 #include <time.h>
 
