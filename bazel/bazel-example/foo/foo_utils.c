@@ -1,8 +1,6 @@
 #include "foo/foo_utils.h"
 
-#include <time.h>
 #include <stdio.h>
+#include <time.h>
 
-void foo_print_time(void) {
-    printf("%lld\n", (long long) time(NULL));
-}
+void foo_print_time(void) { printf("%lld\n", (long long)time(NULL)); }
