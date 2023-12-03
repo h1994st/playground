@@ -1,0 +1,17 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
+
+go_library(
+    name = "utils",
+    srcs = ["math.go"],
+    importpath = "github.com/h1994st/playground/bazel/go-example/utils",
+    visibility = ["//visibility:public"],
+)
+
+go_test(
+    name = "utils_test",
+    srcs = ["math_test.go"],
+    deps = [
+        ":utils",
+        "@com_github_stretchr_testify//require:go_default_library",
+    ],
+)
