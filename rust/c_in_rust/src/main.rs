@@ -1,4 +1,4 @@
-use libafl::bolts::os::{fork, ForkResult};
+use libafl_bolts::os::{fork, ForkResult};
 
 extern "C" {
     fn bar();
