@@ -5,6 +5,8 @@ import sys
 import time
 from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor
 
+import uvloop
+
 
 def blocks(kind: str, n: int):
     log = logging.getLogger(f"{kind} blocks({n})")
@@ -47,6 +49,7 @@ if __name__ == "__main__":
         stream=sys.stderr,
     )
 
+    asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
     loop = asyncio.get_event_loop()
     try:
         loop.run_until_complete(main())
