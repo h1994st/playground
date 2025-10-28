@@ -1,0 +1,9 @@
+[package]
+edition = "2024"
+name = "preimage-rs"
+version = "0.1.0"
+
+[dependencies]
+itertools = "0.14.0"
+rayon = "1.11.0"
+sha1 = "0.10.6"
