@@ -31,7 +31,7 @@ where `n` is an optional parameter specifying the number of trailing 0xFF bytes 
 
 Search for an input that produces a SHA-1 hash ending in two 0xFF bytes
 
-```shell
+```console
 $ cargo build --release
 ...
 $ ./target/release/preimage-rs 4
