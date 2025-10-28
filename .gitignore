@@ -1,5 +1,8 @@
 .vscode/
 
+# Rust
+target/
+
 # Created by https://www.toptal.com/developers/gitignore/api/vim,linux,macos,sublimetext,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=vim,linux,macos,sublimetext,visualstudiocode
 
